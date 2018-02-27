@@ -1,0 +1,7 @@
+#!/bin/bash
+# To start steam if you get the error 
+# /usr/lib/i386-linux-gnu/libxcb-dri3.so.0: undefined symbol: xcb_send_request_with_fds
+# https://github.com/ValveSoftware/steam-for-linux/issues/5249
+# Martin Häggström 180227
+
+LD_PRELOAD='/usr/$LIB/libstdc++.so.6' LIBGL_DRI3_DISABLE=1 steam
